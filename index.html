@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Cliente</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Adiciona ícones caso queira usar -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Formulário de Cadastro -->
+    <div class="form-container" id="form-container">
+        <h2>Cadastro de Cliente</h2>
+        <form id="clienteForm">
+            <label for="nome"><i class="fas fa-user"></i> Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            
+            <label for="email"><i class="fas fa-envelope"></i> Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="telefone"><i class="fas fa-phone"></i> Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(XX)XXXXX-XXXX" required>
+            <small class="input-helper">Formato: (XX)XXXXX-XXXX</small>
+            
+            <label for="observacao"><i class="fas fa-comment"></i> Observação:</label>
+            <textarea id="observacao" name="observacao" required></textarea>
+            
+            <button type="submit"><i class="fas fa-paper-plane"></i> Enviar</button>
+        </form>
+    </div>
+
+    <!-- Tabela de Dados -->
+    <div class="table-container" id="table-container" style="display: none;">
+        <h2>Dados do Cliente</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th><i class="fas fa-user"></i> Nome</th>
+                    <th><i class="fas fa-envelope"></i> Email</th>
+                    <th><i class="fas fa-phone"></i> Telefone</th>
+                    <th><i class="fas fa-comment"></i> Observação</th>
+                </tr>
+            </thead>
+            <tbody id="clienteTableBody"></tbody>
+        </table>
+        <button id="voltarBtn"><i class="fas fa-arrow-left"></i> Voltar</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
